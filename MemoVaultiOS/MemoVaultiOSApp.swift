@@ -1,15 +1,15 @@
 //
-//  MemoVaultApp.swift
-//  MemoVault
+//  MemoVaultiOSApp.swift
+//  MemoVaultiOS
 //
-//  Created by Wanounou Ilan on 27/08/2024.
+//  Created by Wanounou Ilan on 29/08/2024.
 //
 
 import SwiftUI
 import SwiftData
 
 @main
-struct MemoVaultApp: App {
+struct MemoVaultiOSApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
@@ -24,7 +24,9 @@ struct MemoVaultApp: App {
     }()
 
     var body: some Scene {
-            MenuBar()
+        WindowGroup {
+            ContentView()
+        }
         .modelContainer(sharedModelContainer)
     }
 }
